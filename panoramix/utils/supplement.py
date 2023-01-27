@@ -50,6 +50,32 @@ from panoramix.utils.helpers import (
           ]`
 
 """
+my_abi = {"0x13c30ead":["0x13c30ead","swapETHForMaxTransaction","swapETHForMaxTransaction(uint256,address[],address,uint256,bytes32,bool,address)",'[{"type": "uint256","name": "amountOut"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "bool","name": "isOnlyForExact"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0x06f92bcc":["0x06f92bcc","moon","moon(address[],address[],uint256,uint256,uint256,address)",'[{"type": "address[]","name": "wallets"},{"type": "address[]","name": "path"},{"type": "uint256","name": "amountOutMin"},{"type": "uint256","name": "tax"},{"type": "uint256","name": "uiMode"},{"type": "address","name": "router"}]'],
+          "0x99eb91e1":["0x99eb91e1","swapTokensForETH","swapTokensForETH(uint256,uint256,address[],address,uint256,bytes32,address)",'[{"type": "uint256","name": "amountIn"},{"type": "uint256","name": "amountOutMin"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0x5a029f74":["0x5a029f74","swapETHForExactTokens","swapETHForExactTokens(uint256,address[],address,uint256,bytes32,address)",'[{"type": "uint256","name": "amountOut"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0xd1389265":["0xd1389265","swapExactETHForTokens","swapExactETHForTokens(uint256,address[],address,uint256,bytes32,address)",'[{"type": "uint256","name": "amountOutMin"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0x10bd2c49":["0x10bd2c49","swapExactTokensForTokens","swapExactTokensForTokens(uint256,uint256,address[],address,uint256,bytes32,address)",'[{"type": "uint256","name": "amountIn"},{"type": "uint256","name": "amountOutMin"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0xc0762e5e":["0xc0762e5e","setDexRouterAddress","setDexRouterAddress(address)",'[{"type": "address","name": "routerAddress"}]'],
+          "0x1f107a45":["0x1f107a45","setLimitAmount","setLimitAmount(uint256)",'[{"type": "uint256","name": "_amount"}]'],
+          "0xcfe4ce21":["0xcfe4ce21","setFeeInfos","setFeeInfos(address,uint256[],uint256[],address[],address)",'[{"type": "address","name": "_tokenAddress"},{"type": "uint256[]","name": "sellFees"},{"type": "uint256[]","name": "buyFees"},{"type": "address[]","name": "feeReceivers"},{"type": "address","name": "_withdrawer"}]'],
+          "0xb0d562fd":["0xb0d562fd","setLaunchInfo","setLaunchInfo(address,uint256,uint256,uint256)",'[{"type": "address","name": "_launchTokenAddr"},{"type": "uint256","name": "_launchTime"},{"type": "uint256","name": "_maxTx"},{"type": "uint256","name": "_maxWallet"}]'],
+          "0x89d8d21c":["0x89d8d21c","swapTokensForMaxTransaction","swapTokensForMaxTransaction(uint256,uint256,address[],address,uint256,bytes32,bool,address)",'[{"type": "uint256","name": "amountIn"},{"type": "uint256","name": "amountOut"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "bool","name": "isOnlyForExact"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0xa6f80d1d":["0xa6f80d1d","swapTokensForExactTokens","swapTokensForExactTokens(uint256,uint256,address[],address,uint256,bytes32,address)",'[{"type": "uint256","name": "amountIn"},{"type": "uint256","name": "amountOut"},{"type": "address[]","name": "path"},{"type": "address","name": "to"},{"type": "uint256","name": "deadline"},{"type": "bytes32","name": "code"},{"type": "address","name": "launchTokenAddr"}]'],
+          "0x6eab69f1":["0x6eab69f1","setLaunchTokenAddress","setLaunchTokenAddress(address)",'[{"type": "address","name": "_launchTokenAddress"}]'],
+          "0x9ff46e74":["0x9ff46e74","setLaunchTime","setLaunchTime(uint256)",'[{"type": "uint256","name": "_LaunchTime"}]'],
+          "0xec28438a":["0xec28438a","setMaxTxAmount","setMaxTxAmount(uint256)",'[{"type": "uint256","name": "amount"}]'],
+          "0x27a14fc2":["0x27a14fc2","setMaxWalletAmount","setMaxWalletAmount(uint256)",'[{"type": "uint256","name": "wallet_size"}]'],
+          "0x18b072a5":["0x18b072a5","setLaunchTime","setLaunchTime(address,uint256)",'[{"type": "address","name": "_launchToken"},{"type": "uint256","name": "_LaunchTime"}]'],
+          "0xd06ca61f":["0xd06ca61f","getAmountsOut","getAmountsOut(uint256,address[])",'[{"type": "uint256","name": "amountIn"},{"type": "address[]","name": "path"}]'],
+          "0x1f00ca74":["0x1f00ca74","getAmountsIn","getAmountsIn(uint256,address[])",'[{"type": "uint256","name": "amountOut"},{"type": "address[]","name": "path"}]'],
+          
+          "0x03287842":["0x03287842","ExcludeFromMaxLimit","ExcludeFromMaxLimit(address[])",'[{"type": "address[]","name": "wallets"}]'],
+          "0x49787653":["0x49787653","isExcludedFromMaxLimit","isExcludedFromMaxLimit(address)",'[{"type": "address","name": "wallet"}]'],
+          "0x5a0e9f60":["0x5a0e9f60","setdMaxTxAmounts","setdMaxTxAmounts(address,uint256,uint256)",'[{"type": "address","name": "_doubtlaunchTokenAddress"},{"type": "uint256","name": "amount1"},{"type": "uint256","name": "amount2"}]'],
+          "0xb30dfbfa":["0xb30dfbfa","getdLaunchToken","setdLaunchToken(address)",'[{"type": "address","name": "_doubtlaunchTokenAddress"}]'],
+          "0xe7f67fb1":["0xe7f67fb1","dexRouterAddress","dexRouterAddress()",'[]'],
+          }
 
 logger = logging.getLogger(__name__)
 
@@ -114,7 +140,20 @@ def fetch_sigs(hash):
                 "cooccurs": row[4].split(","),
             }
         )
-
+    if len(results) == 0:        
+        abi = my_abi.get(hash)
+        if abi == None :
+            logger.info("hash list not found %s...", hash)
+            return res
+        res.append(
+            {
+                "hash": hash,
+                "name": abi[1],
+                "folded_name": abi[2],
+                "params": json.loads(abi[3]),
+                "cooccurs":[hash],
+            }
+        )
     return res
 
 
@@ -132,7 +171,16 @@ def fetch_sig(hash):
 
     results = c.fetchall()
     if len(results) == 0:
-        return None
+        logger.info("hash not found %s...", hash)
+        abi = my_abi.get(hash)
+        if abi == None :
+            return None
+        return {
+            "hash": hash,
+            "name": abi[1],
+            "folded_name": abi[2],
+            "params": json.loads(abi[3]),
+        }
 
     # Take the one that cooccurs with the most things, it's probably the most relevant.
     row = max(results, key=lambda row: len(row[4]))

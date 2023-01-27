@@ -6,7 +6,7 @@ import os
 import sys
 from contextlib import redirect_stdout
 
-import timeout_decorator
+from wrapt_timeout_decorator import timeout
 
 import panoramix.folder as folder
 from panoramix.contract import Contract
@@ -150,14 +150,13 @@ def _decompile_with_loader(loader, only_func_name=None) -> Decompilation:
 
         logger.info("Parsing %s...", fname)
         logger.debug("stack %s", stack)
-
+       
         try:
             if target > 1 and loader.lines[target][1] == "jumpdest":
-                target += 1
-
-            @timeout_decorator.timeout(60 * 3, timeout_exception=TimeoutInterrupt)
+                target += 1            
+            #@timeout(60 * 5, timeout_exception=TimeoutInterrupt, use_signals=False)
             def dec():
-                trace = VM(loader).run(target, stack=stack, timeout=60)
+                trace = VM(loader).run(target, stack=stack, timeout=0)
                 explain("Initial decompiled trace", trace[1:])
 
                 if "--explain" in sys.argv:
@@ -180,7 +179,10 @@ def _decompile_with_loader(loader, only_func_name=None) -> Decompilation:
 
         except (Exception, TimeoutInterrupt):
             problems[hash] = fname
-
+            if len(trace) > 0 :
+                functions[hash] = Function(hash, trace)
+            else :
+                functions[hash] = Function(hash, "error")
             logger.exception("Problem with %s%s", fname, C.end)
 
             if "--strict" in sys.argv:
